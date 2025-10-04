@@ -1,12 +1,11 @@
 *************** RECIBO ***************
-Fecha y hora de emisión: 2025-10-03 00:46:32.638513
+Fecha y hora de emisión: 2025-10-04 12:06:17
 ---------------------------------------
-B003 | Singani Tres Estrellas | 70.0 | 5
-B001 | Tequila Reposado | 120.0 | 1
-B004 | Cachaza Velho Barreiro | 85.0 | 1
+Codigo | Nombre         | Precio U | Cantidad
+B005   | Cerveza Paceña | 10.0     | 5
 
 ---------------------------------------
-TOTAL A PAGAR: 0,00
+TOTAL A PAGAR: 50,00
 ****************************************
-     ¡Gracias por su compra!            
+         ¡Gracias por su compra!            
 ****************************************

@@ -6,6 +6,7 @@ package Interfaz;
 
 import adt.AVL;
 import adt.ArbolBinarioBusqueda;
+import adt.ArbolMViasBusqueda;
 import adt.Categoria;
 import adt.IArbolBusqueda;
 import adt.SubCategoria;
@@ -28,9 +29,6 @@ import java.time.Clock;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedList;
-import javax.management.StringValueExp;
-import javax.swing.JComboBox;
-import javax.swing.JTable;
 
 /**
  *
@@ -60,7 +58,6 @@ public class Formulario extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jComboBox3 = new javax.swing.JComboBox<>();
-        jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -69,6 +66,7 @@ public class Formulario extends javax.swing.JFrame {
         jTable3 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,11 +114,7 @@ public class Formulario extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Codigo", "Nombre", "Precio", "Fecha de Elaboracion", "Fecha de vencimiento"
@@ -132,13 +126,6 @@ public class Formulario extends javax.swing.JFrame {
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Buscar Producto Si esta disponible");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
             }
         });
 
@@ -154,14 +141,14 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(356, 356, 356))
+                .addGap(355, 355, 355))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(57, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(44, 44, 44))
         );
 
         jButton3.setText("Añadir a carrito");
@@ -205,6 +192,13 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setText("Modificar producto");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -217,31 +211,29 @@ public class Formulario extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
+                                .addGap(29, 29, 29)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jButton3)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton5))
+                                        .addComponent(jButton5)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton6))
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)))
-                        .addContainerGap(79, Short.MAX_VALUE))
+                                .addComponent(jButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)))
+                        .addContainerGap(80, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(92, 92, 92))))
         );
         layout.setVerticalGroup(
@@ -257,22 +249,22 @@ public class Formulario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton4))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
+                        .addGap(0, 26, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
                             .addComponent(jButton5)
                             .addComponent(jButton6))
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(jLabel2)
+                .addGap(49, 49, 49))
         );
 
         pack();
@@ -338,16 +330,10 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Borrado logico
+        
         String categoriaNombre = (String)jComboBox1.getSelectedItem();
         String subCategoriaNombre = (String)jComboBox2.getSelectedItem();
         String tipoArbol = (String)jComboBox3.getSelectedItem();
-        //String codigoProducto = JOptionPane.showInputDialog(this, "Ingrese el codigo del producto que quiere deshabilitar");
-        
-        /*Categoria categoriaEncontrada = tienda.buscar(new Categoria(categoriaNombre,tipoArbol));
-        SubCategoria subCategoriaEncontrada = categoriaEncontrada.getSubCategoria().buscar(new SubCategoria(subCategoriaNombre,tipoArbol));
-        Producto productoEncontrado = subCategoriaEncontrada.getProductos().buscar(new Producto(codigoProducto, tipoArbol, 0f, "", ""));
-        productoEncontrado.setEstaDisponible(false);*/
         
         String codigo = (String)jTable2.getValueAt(jTable2.getSelectedRow(), 0);
         // borrado del arbol
@@ -356,7 +342,7 @@ public class Formulario extends javax.swing.JFrame {
         Producto produtoEn = subCateriaEn.getProductos().buscar(new Producto(codigo,"",0f,"",""));
         try {
             subCateriaEn.getProductos().eliminar(produtoEn);
-            jComboBox2ActionPerformed(evt);
+            jComboBox2ActionPerformed(evt); //esto me muestra los productos en la tabla
         } catch (ExcepcionDatoNoExiste ex) {
             Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -388,39 +374,14 @@ public class Formulario extends javax.swing.JFrame {
             }
         }else if(tipoArbol.contains("ARBOL MVIAS")){
             try {
-                //tienda = new <>();
+                tienda = new ArbolMViasBusqueda<>(4);
                 iniciarTienda(tipoArbol);
+                System.out.println("se creo con arbol Mvias");
             } catch (ExcepcionDatoYaExiste ex) {
                 Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        System.out.println(jTable2.getSelectedRow());
-        String codigoProducto = JOptionPane.showInputDialog(this, "Ingrese el codigo del producto");
-        String categoriaNombre = (String)jComboBox1.getSelectedItem();
-        String subCategoriaNombre = (String)jComboBox2.getSelectedItem();
-        String arbol = (String)jComboBox3.getSelectedItem();
-        
-        //p001
-        
-        if (codigoProducto != null && !codigoProducto.trim().isEmpty()) {
-            
-            Categoria categoriaEncontrada = tienda.buscar(new Categoria(categoriaNombre,arbol));
-            SubCategoria SubCategoriaEncontrada = categoriaEncontrada.getSubCategoria().buscar(new SubCategoria(subCategoriaNombre, arbol));
-            Producto productoEncontrado = SubCategoriaEncontrada.getProductos().buscar(new Producto(codigoProducto,"",0f,"",""));
-            if(productoEncontrado.isEstaDisponible()){
-                JOptionPane.showMessageDialog(null,"El producto : " + productoEncontrado.getNombre() + " esta disponible" );
-            }else{
-                JOptionPane.showMessageDialog(null,"El producto : " + productoEncontrado.getNombre() + " no esta disponible" );
-            }
-            System.out.println(productoEncontrado.toString());
-        } else {
-            JOptionPane.showMessageDialog(this, "No se ingresó un producto.");
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
@@ -431,7 +392,7 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        
         String categoriaNombre = (String)jComboBox1.getSelectedItem();
         String subCategoriaNombre = (String)jComboBox2.getSelectedItem();
         String tipoArbol = (String)jComboBox3.getSelectedItem();
@@ -475,71 +436,55 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        // Obtenemos el texto del JTextArea
-    String contenido = this.tablaAString();
-    
-    // Nombre del archivo (puedes personalizarlo con fecha/hora si quieres)
-    String nombreArchivo = "recibo2.txt";
-    
-    double total = totalAPagar();
-    
-    // Procesar cada línea del TextArea para calcular el total
-//    String[] lineas = contenido.split("\n");
-//    for (String linea : lineas) {
-//        String[] partes = linea.split("\\|"); // separar por "|"
-//        if (partes.length >= 3) {
-//            try {
-//                double precio = Double.parseDouble(partes[2].trim());
-//                total += precio;
-//            } catch (NumberFormatException e) {
-//                // ignorar líneas mal formateadas
-//            }
-//        }
-//    }
-    
-    try {
-        // Crear el archivo y escribir el contenido
-        File archivo = new File(nombreArchivo);
-        FileWriter fw = new FileWriter(archivo);
-        BufferedWriter bw = new BufferedWriter(fw);
-        Clock clock = Clock.systemDefaultZone(); // Reloj en UTC
-        LocalTime horaActual = LocalTime.now(clock);
-        
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm:ss");
-        String horaBonita = horaActual.format(formato);
-        
-        bw.write("*************** RECIBO ***************\n");
-        bw.write("Fecha y hora de emisión: " + java.time.LocalDate.now() + " " + horaBonita + "\n");
-        bw.write("---------------------------------------\n");
-        bw.write(contenido + "\n");
-        bw.write("---------------------------------------\n");
-        bw.write(String.format("TOTAL A PAGAR: %.2f\n", total));
-        bw.write("****************************************\n");
-        bw.write("         ¡Gracias por su compra!            \n");
-        bw.write("****************************************\n");
-        
-        bw.close();
-        
-        JOptionPane.showMessageDialog(this, 
-            "Recibo generado exitosamente en: " + nombreArchivo,
-            "Éxito", JOptionPane.INFORMATION_MESSAGE);
-        if (Desktop.isDesktopSupported()) {
-        Desktop desktop = Desktop.getDesktop();
+
+        String contenido = this.tablaAString();
+
+        String nombreArchivo = "recibo.txt";
+
+        double total = totalAPagar();
+
         try {
-            desktop.open(archivo);
+
+            File archivo = new File(nombreArchivo);
+            FileWriter fw = new FileWriter(archivo);
+            BufferedWriter bw = new BufferedWriter(fw);
+            Clock clock = Clock.systemDefaultZone(); // Reloj en UTC
+            LocalTime horaActual = LocalTime.now(clock);
+
+            DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm:ss");
+            String horaBonita = horaActual.format(formato);
+
+            bw.write("*************** RECIBO ***************\n");
+            bw.write("Fecha y hora de emisión: " + java.time.LocalDate.now() + " " + horaBonita + "\n");
+            bw.write("---------------------------------------\n");
+            bw.write(contenido + "\n");
+            bw.write("---------------------------------------\n");
+            bw.write(String.format("TOTAL A PAGAR: %.2f\n", total));
+            bw.write("****************************************\n");
+            bw.write("         ¡Gracias por su compra!            \n");
+            bw.write("****************************************\n");
+
+            bw.close();
+
+            JOptionPane.showMessageDialog(this,
+                    "Recibo generado exitosamente en: " + nombreArchivo,
+                    "Éxito", JOptionPane.INFORMATION_MESSAGE);
+            if (Desktop.isDesktopSupported()) {
+                Desktop desktop = Desktop.getDesktop();
+                try {
+                    desktop.open(archivo);
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(this, "No se pudo abrir el TXT: " + e.getMessage());
+                }
+            }
+
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "No se pudo abrir el TXT: " + e.getMessage());
+            JOptionPane.showMessageDialog(this,
+                    "Error al generar el recibo: " + e.getMessage(),
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
-        
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, 
-            "Error al generar el recibo: " + e.getMessage(),
-            "Error", JOptionPane.ERROR_MESSAGE);
-    }
-        
-        
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -548,6 +493,36 @@ public class Formulario extends javax.swing.JFrame {
         modelo.setRowCount(0);
         jLabel2.setText("PRECIO TOTAL: ");
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        //Metodo para modificar un Producto
+        NuevoProducto ventanaDenuevoProducto = new NuevoProducto();
+        ventanaDenuevoProducto.setVisible(true);
+        //todo esto necesito para buscar
+        String categoriaNombre = (String)jComboBox1.getSelectedItem();
+        String subCategoriaNombre = (String)jComboBox2.getSelectedItem();
+        String tipoArbol = (String)jComboBox3.getSelectedItem();
+        String codigoProducto = (String)jTable2.getValueAt(jTable2.getSelectedRow(), 0);
+        
+        Categoria categoriaDelProducto = tienda.buscar(new Categoria(categoriaNombre, tipoArbol));
+        
+        SubCategoria subCategoriaDelProducto = categoriaDelProducto.getSubCategoria()
+                                                .buscar(new SubCategoria(subCategoriaNombre, tipoArbol));
+        
+        Producto productoEncontrado = subCategoriaDelProducto.getProductos().buscar(new Producto(codigoProducto,"",0f,"",""));
+        
+        ventanaDenuevoProducto.nuevoProducto = productoEncontrado;
+        
+        //al querer ejecutarse esta parte hace que espere hasta que mi producto se modifique
+        ventanaDenuevoProducto.setOnProductoModificado(()->{
+        
+            jComboBox2ActionPerformed(evt);
+        
+        });
+        
+        
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -611,38 +586,6 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     // End of variables declaration//GEN-END:variables
 
-
-//    private void mostrarSubCategorias(String categoria) {
-//        List<Categoria> listaDecategorias = tienda.contiene(dato);
-//        List<SubCategoria> listaDeSubCategorias = new ArrayList<>();
-//        for(Categoria categori: listaDecategorias){
-//            if(categori.getNombre().contains(categoria)){
-//                listaDeSubCategorias = categori.getSubCategoria().recorridoEnInOrden();
-//                break;
-//            }
-//        }
-//        
-//        final int LONGITUD_DE_LA_LISTA_CATEGORIA = listaDeSubCategorias.size();
-//        String[] columnas = {"ID", "Nombre"};
-//        String[][] datos = new String[LONGITUD_DE_LA_LISTA_CATEGORIA][2];
-//        
-//        for (int i = 0; i < LONGITUD_DE_LA_LISTA_CATEGORIA; i++) {
-//             datos[i][0] = String.valueOf(i);
-//             datos[i][1] = listaDeSubCategorias.get(i).getNombre();
-//        }
-//        
-//        DefaultTableModel modelo = new DefaultTableModel(datos, columnas);
-//        jTable2.setModel(modelo);
-//        
-//        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
-//        model.addElement("SUB-CATEGORIA");
-//        for(SubCategoria subCategori: listaDeSubCategorias){
-//            model.addElement(subCategori.getNombre());
-//        }
-//        
-//        jComboBox2.setModel(model);
-//        
-//    }
 
     private void iniciarTienda(String tipoDeArbol) throws ExcepcionDatoYaExiste {
  

@@ -4,6 +4,8 @@
  */
 package adt;
 
+
+
 /**
  *
  * @author javi24
@@ -21,7 +23,8 @@ public class Categoria implements Comparable<Categoria>{
         } else if (tipoArbol.contains("ARBOL AVL")) {
             subCategoria = new AVL<>();
         } else if (tipoArbol.contains("ARBOL MVIAS")) {
-
+            subCategoria = new ArbolMViasBusqueda(4);
+            System.out.println("se creo correctamente con Mvias");
         }
     }
    

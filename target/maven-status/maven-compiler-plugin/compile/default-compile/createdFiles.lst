@@ -1,4 +1,5 @@
 Interfaz\Formulario$4.class
+adt\ArbolMViasBusqueda.class
 Interfaz\Formulario$10.class
 adt\AVL.class
 Interfaz\NuevoProducto.class
@@ -7,12 +8,15 @@ Interfaz\Formulario$9.class
 com\mycompany\proyecto_arboles_ed2\Proyecto_Arboles_ED2.class
 Interfaz\NuevoProducto$5.class
 excepciones\ExcepcionDatoYaExiste.class
+adt\NodoMVias.class
 Interfaz\Formulario$1.class
 Interfaz\Formulario$8.class
 Interfaz\Formulario$6.class
 Interfaz\Formulario$3.class
+Interfaz\NuevoProducto$8.class
 adt\Categoria.class
 Interfaz\NuevoProducto$3.class
+Interfaz\NuevoProducto$6.class
 Interfaz\Formulario$5.class
 adt\IArbolBusqueda.class
 Interfaz\Formulario$11.class
@@ -24,5 +28,6 @@ Interfaz\NuevoProducto$2.class
 adt\Producto.class
 adt\SubCategoria.class
 Interfaz\NuevoProducto$4.class
+Interfaz\NuevoProducto$7.class
 excepciones\ExcepcionDatoNoExiste.class
 Interfaz\Formulario$7.class

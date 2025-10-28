@@ -1,12 +1,18 @@
 *************** RECIBO ***************
-Fecha y hora de emisión: 2025-10-28 09:19:25
+Fecha y hora de emisión: 2025-10-28 09:46:36
 ---------------------------------------
-Codigo | Nombre             | Precio U | Cantidad
-H004   | Servilleta Pandita | 9.0      | 10
-H006   | Papel Higiénico    | 30.0     | 7
+Codigo | Nombre                      | Precio U | Cantidad
+H006   | Papel Higiénico             | 30.0     | 3
+H005   | Papel Cebolla               | 7.5      | 2
+H007   | Papel Aluminio              | 12.0     | 2
+H004   | Servilleta Pandita          | 9.0      | 2
+H002   | Detergente Surf             | 18.0     | 2
+H003   | Suavizante Todo Brillo      | 20.0     | 2
+H001   | Suavizante Caballero        | 22.0     | 4
+B002   | Vino Tinto Campos de Solana | 95.0     | 4
 
 ---------------------------------------
-TOTAL A PAGAR: 300,00
+TOTAL A PAGAR: 691,00
 ****************************************
          ¡Gracias por su compra!            
 ****************************************

@@ -14,6 +14,7 @@ Interfaz\Formulario$1.class
 Interfaz\Formulario$8.class
 Interfaz\Formulario$12.class
 Interfaz\Formulario$6.class
+Interfaz\Formulario$14.class
 Interfaz\Formulario$3.class
 Interfaz\NuevoProducto$8.class
 adt\Categoria.class
@@ -33,5 +34,6 @@ adt\Producto.class
 adt\SubCategoria.class
 Interfaz\NuevoProducto$4.class
 Interfaz\NuevoProducto$7.class
+Interfaz\Formulario$13.class
 excepciones\ExcepcionDatoNoExiste.class
 Interfaz\Formulario$7.class

@@ -282,11 +282,14 @@ public class Formulario extends javax.swing.JFrame {
                     modelo.addElement(ElementoListaDeSubcategoria.getNombre());
                 }  
         jComboBox2.setModel(modelo);
+        jComboBox2ActionPerformed(evt);
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
     
    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         NuevoProducto ventanaDenuevoProducto = new NuevoProducto();
+        ventanaDenuevoProducto.visibleBotonAñadir(true);
         ventanaDenuevoProducto.setVisible(true);
         
         
@@ -497,7 +500,9 @@ public class Formulario extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         //Metodo para modificar un Producto
         NuevoProducto ventanaDenuevoProducto = new NuevoProducto();
+        ventanaDenuevoProducto.visibleBotonesModificar(true);
         ventanaDenuevoProducto.setVisible(true);
+        
         //todo esto necesito para buscar
         String categoriaNombre = (String)jComboBox1.getSelectedItem();
         String subCategoriaNombre = (String)jComboBox2.getSelectedItem();

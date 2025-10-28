@@ -1,12 +1,12 @@
 *************** RECIBO ***************
-Fecha y hora de emisión: 2025-10-24 16:13:36
+Fecha y hora de emisión: 2025-10-28 09:19:25
 ---------------------------------------
-Codigo | Nombre       | Precio U  | Cantidad
-P002   | Rímel Yambal | 60.0      | 2
-P006   | Ibuprofeno   | 1000000.0 | 26
+Codigo | Nombre             | Precio U | Cantidad
+H004   | Servilleta Pandita | 9.0      | 10
+H006   | Papel Higiénico    | 30.0     | 7
 
 ---------------------------------------
-TOTAL A PAGAR: 26000120,00
+TOTAL A PAGAR: 300,00
 ****************************************
          ¡Gracias por su compra!            
 ****************************************

@@ -18,6 +18,9 @@ public class NuevoProducto extends javax.swing.JFrame {
     
     public NuevoProducto() {
         initComponents();
+        jButton3.setVisible(false);
+        jButton2.setVisible(false);
+        jButton1.setVisible(false);
     }
 
     /**
@@ -258,6 +261,15 @@ public class NuevoProducto extends javax.swing.JFrame {
     
     public void setOnProductoModificado(Runnable callBack){
         this.onProductoModificado = callBack;
+    }
+    
+    public void visibleBotonesModificar(boolean habilitar){
+        jButton2.setVisible(habilitar);
+        jButton3.setVisible(habilitar);
+    }
+    
+    public void visibleBotonAñadir(boolean habilitar){
+        jButton1.setVisible(habilitar);
     }
 
     /**
